@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coins</title>
+  <link rel="stylesheet" href="/Imersao/aula2/style.css">
+  <link rel="icon"
+    href="https://cdn-icons.flaticon.com/png/512/604/premium/604542.png?token=exp=1647189626~hmac=6fae32e9f02e66833dc685b9c008c003">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="menu-box">
+        <div class="logo">
+          <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg"
+            class="page-logo"  alt="Imersão Dev">
+        </div>
+        <nav class="menu" id="nav-menu">
+          <ul>
+            <li><a href="#features-target">BENEFÍCIOS</a></li>
+            <li><a href="#depositions-target">DEPOIMENTOS</a></li>
+            <li><a href="#invest-target">CUSTO</a></li>
+            <li><a href="#contact-target">CONTATO</a></li>
+            <li><a href="https://www.lumis.com.br/a-lumis/blog/" target="_black">BLOG</a></li>
+            <li id="btn2" class="loginBtn">
+              <a href="main.jsp?lumChannelId=402880847547EB3A01754AE8437F3077"><button>Login</button></a>
+            </li>
+
+          </ul>
+        </nav>
+        <!-- Logo do Projeto e Hamburguer -->
+        <div class="hamburguer-container" id="btn-mobile">
+          <input type="checkbox" id="checkbox-menu" data-button-menu>
+          <label for="checkbox-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </div>
+    </div>  
+  </header>
+
+  <main class="bg-pan-left">
+    <div class="destaque">
+      <img src="https://cdn-icons-png.flaticon.com/512/3347/3347651.png" alt="Global Money">
+    </div>
+    <div class="calc">
+      <p for="moeda">Insira o valor <b class="blink">|</b> </p><br>
+      <input class="calc_input" type="number" id="valor" size="2" placeholder="DINHEIRINHO AMERICANO" /><br>
+      <a href="#abrirModal"><button class="calc_button" type="submit" onclick="Converter()">Converter</button></a>
+      
+      <div id="abrirModal" class="modal">
+        <a href="#fechar" title="Fechar" class="fechar">x</a>
+        <h2 id="valorConvertido"></h2>
+      </div>
+      
+    </div>
+  </main>
+
+  <footer style="width: 100%;">
+    <a href="https://alura.com.br/" target="_blank">
+      <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+    </a>
+  </footer>
+  <script src="/Imersao/aula2/index.js"></script>
+</body>
+
+</html>

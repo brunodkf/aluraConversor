@@ -1,0 +1,375 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+@media (max-width: 500px) {
+  .calc_input{
+    width: 70% !important;
+  }
+  .modal{
+    width: 80% !important;
+  }
+  .modal a{
+    font-size: 48px !important;
+  }
+  h2{
+    margin-top: 250px !important;
+  }
+}
+/* 
+ ================= START CODING================================= */
+ .container {
+    width: 100%;
+    background-color: #2b2a2c;
+  }
+  .menu-box{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .logo img{
+    width: 150px;
+  }
+
+
+ 
+ 
+/* --------------------------------------------------------- */
+
+  .menu{
+    margin-top: 20px;
+    display: block;    
+  }
+  
+  .menu ul li{
+    text-align: center;
+  }
+
+  .menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-family: "Open Sans";
+    font-size: 13px;
+    margin: 1px 8px;
+  }
+
+  .menu ul li a:hover{
+      color: #FFBA45;
+  }
+
+  .menuWraper {
+    padding-top: 25px;
+  }
+
+/* ---------------- HAMBURGUER ----------------- */
+.hamburguer-container{
+  height: 100%;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#checkbox-menu{
+  position: absolute;
+  right: 3px;
+  opacity: 0;
+}
+
+.hamburguer-container label{
+  cursor: pointer;
+  position: relative;
+  display: block;
+  height: 22px;
+  width: 30px;
+}
+
+.hamburguer-container label span{
+  position: absolute;
+  display: block;
+  height: 5px;
+  width: 100%;
+  border-radius: 30px;
+  background-color: #ffba45;
+  transition: 0.25s ease-in-out;
+}
+
+
+.hamburguer-container label span:nth-child(1){
+  top: 0;
+}
+.hamburguer-container label span:nth-child(2){
+  top: 8px;
+}
+.hamburguer-container label span:nth-child(3){
+  top: 16px;
+}
+
+
+#checkbox-menu:checked + label span:nth-child(1){
+  transform: rotate(-45deg);
+  top: 8px;
+}
+
+#checkbox-menu:checked + label span:nth-child(2){
+  opacity: 0;
+}
+
+#checkbox-menu:checked + label span:nth-child(3){
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+
+
+.menu{
+  display: none;
+}
+.menu.active{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 50vh);
+  top: 70px;
+  right: 0px;
+  z-index: 1000;
+  overflow-y: hidden;
+  background-color: #7C2C7B;
+}
+#btn2{
+  display: flex;
+  margin-left: -5px;
+}
+#btn2 a{
+  display: flex;
+  padding: 7px 35px;
+  background: #FFBA45;
+  border-radius: 25px;
+  outline: none;
+  color: #6B1D5D;
+  font-weight: 600;
+  border: #FFBA45;
+}
+#btn2 button{
+  padding: 0px 6px;
+  background: #FFBA45;
+  border-radius: 25px;
+  outline: none;
+  color: #6B1D5D;
+  font-weight: 600;
+  border: #FFBA45;
+}
+.menu ul{
+  flex-direction: column;
+}
+.menu ul li{
+  width: 100%;
+  text-align: start;
+}
+.menu ul li a{
+  font-weight: bolder;
+  font-size: 16px;
+  padding: 1rem 0;
+  margin: 0 1.2rem;
+}
+/* 
+================================================================================== */
+main{
+  width: 100%;
+  height: 100vh;
+  background: #2b2a2c;
+  background: linear-gradient(180deg, rgba(43,42,44,1) 36%, rgba(52,45,59,1) 53%, rgba(64,49,80,1) 71%, rgba(76,53,101,1) 89%, rgba(87,56,119,1) 96%, #613b87 100%);
+}
+
+
+.destaque{
+  width: 100%;
+  text-align: center;
+  padding-top: 80px;
+}
+.destaque img{
+  width: 250px;
+  padding-left: 30px;
+}
+
+.calc{
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+
+.calc p{
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  margin-bottom: 10px;
+  margin: 0 auto;
+  width: 280px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: type 1.2s steps(25, end); 
+}
+.blink{
+  animation: blink 0.6s infinite;
+}
+
+.calc_input{
+  width: 20%;
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  border: solid 2px #7c00f8;
+  border-radius: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+.calc_input[type=number]:focus {
+  outline: none;
+  border: solid 2px #7c00f8;
+}
+
+
+.page-title {
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  margin-bottom: 10px;
+}
+  
+.page-subtitle {    
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+}
+  
+.page-logo {
+  width: 200px;
+}
+  
+  .alura-logo {
+    width: 40px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+
+
+  .calc_button {
+    margin-top: 15px;
+    padding: 7px 25px;
+    font-size: 18px;
+    background: #7c00f8;
+    border-radius: 25px;
+    outline: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Roboto Mono", monospace;
+    border: none;
+  }
+  
+  h2 {
+    color: #ffffff;
+    font-size: 30px;
+    margin-top: 150px;
+  }
+  
+/* 
+  ===================MODAL========================== */
+
+  .modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 200ms ease-in;
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in;
+    pointer-events: none;
+
+    width: 60%;
+    margin: 10% auto;
+    padding: 15px 20px;
+    border: solid 2px #7c00f8;
+    border-radius: 30px;
+  }
+  .modal a{
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    font-size: 38px;
+    color: #FFBA45;
+  }
+  .modal a:hover{
+    color: #7c00f8;
+    transition: 200ms ease-in;
+  }
+  .modal:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
